@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(CDChangeScene());
             Destroy(collision.gameObject);
         }
+
     }
     
     IEnumerator CDChangeScene() {

@@ -8,6 +8,7 @@ TagManager:
   - Star
   - GameManager
   - Bones
+  - Buff
   layers:
   - Default
   - TransparentFX
