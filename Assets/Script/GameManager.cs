@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int SceneIndex;
+    //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         //     PlayerPrefs.SetInt("SceneIndex", 1);
         //     PlayerPrefs.Save();
         // }
-        SceneIndex = PlayerPrefs.GetInt("SceneIndex", 1);     
+        //SceneIndex = PlayerPrefs.GetInt("SceneIndex", 1);     
     }
 
     // Update is called once per frame
@@ -23,14 +23,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void ChangeScene() {
-        SceneIndex++;
-        if (SceneIndex > 3) SceneIndex = 1; 
-        PlayerPrefs.SetInt("SceneIndex", SceneIndex);
-        PlayerPrefs.Save();
-        string nextScene = "Lv" + SceneIndex;
-        SceneManager.LoadScene(nextScene);  
-        Debug.Log(nextScene);
-        
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
+            nextSceneIndex = 0; // Scene pertama (Lv1)
+        }
+
+        SceneManager.LoadScene(nextSceneIndex);
     }
 
 }
