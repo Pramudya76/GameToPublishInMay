@@ -19,7 +19,7 @@ public class Thorns : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Bones") {
+        if(collision.gameObject.tag == "Bones" || collision.gameObject.tag == "Player") {
             Parent.gravityScale = 1;
         }
     }

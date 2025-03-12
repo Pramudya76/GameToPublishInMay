@@ -9,6 +9,8 @@ TagManager:
   - GameManager
   - Bones
   - Buff
+  - Ground
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Walls
-  - 
+  - Thorns
   - 
   - 
   - 
