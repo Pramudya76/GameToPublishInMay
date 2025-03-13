@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3364531819163596007}
   - component: {fileID: 3918229785932484338}
   - component: {fileID: -661763682874215277}
+  - component: {fileID: -143215594668295108}
   m_Layer: 0
-  m_Name: Bentuk2
-  m_TagString: Player
+  m_Name: ModeSticky
+  m_TagString: StickyMode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,3 +178,15 @@ MonoBehaviour:
   object1: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
   object2: {fileID: 6604930277738360070}
   object3: {fileID: 7403420674531380175, guid: b694eedea620b8e428a4e140113cd68f, type: 3}
+--- !u!114 &-143215594668295108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6604930277738360070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

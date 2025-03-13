@@ -34,7 +34,7 @@ public class MechanicWork : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Bones") {
+        if(collision.gameObject.tag == "StoneMode") {
             moving = true;
             StartCoroutine(CDReset());
         }        
