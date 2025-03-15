@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 495621710}
   - component: {fileID: 495621709}
   - component: {fileID: 495621712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1243,7 +1243,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1980,7 +1980,7 @@ GameObject:
   - component: {fileID: 1886828611}
   - component: {fileID: 1886828613}
   - component: {fileID: 1886828614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mecanisme
   m_TagString: Untagged
   m_Icon: {fileID: 0}

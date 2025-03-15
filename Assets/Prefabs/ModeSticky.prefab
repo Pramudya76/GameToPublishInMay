@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7076909402417234903}
   - component: {fileID: 3378421841919484164}
   - component: {fileID: 3364531819163596007}
-  - component: {fileID: 3918229785932484338}
   - component: {fileID: -661763682874215277}
   - component: {fileID: -143215594668295108}
+  - component: {fileID: -8185269328859664034}
+  - component: {fileID: -3478723396214483575}
   m_Layer: 0
   m_Name: ModeSticky
   m_TagString: StickyMode
@@ -117,8 +118,47 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &3918229785932484338
-BoxCollider2D:
+--- !u!114 &-661763682874215277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6604930277738360070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9aba4cfbcd9b22468115b572aa95543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object1: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
+  object2: {fileID: 6604930277738360070}
+  object3: {fileID: 7403420674531380175, guid: b694eedea620b8e428a4e140113cd68f, type: 3}
+--- !u!114 &-143215594668295108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6604930277738360070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8185269328859664034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6604930277738360070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0484118f677bcdb4196a5c64a8d58781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &-3478723396214483575
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,41 +192,4 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &-661763682874215277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6604930277738360070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9aba4cfbcd9b22468115b572aa95543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  object1: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  object2: {fileID: 6604930277738360070}
-  object3: {fileID: 7403420674531380175, guid: b694eedea620b8e428a4e140113cd68f, type: 3}
---- !u!114 &-143215594668295108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6604930277738360070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 0.5

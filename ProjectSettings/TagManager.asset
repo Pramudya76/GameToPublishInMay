@@ -11,6 +11,8 @@ TagManager:
   - Buff
   - Ground
   - Walls
+  - StoneMode
+  - StickyMode
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - UI
   - Walls
   - Thorns
-  - 
+  - Ground
   - 
   - 
   - 
