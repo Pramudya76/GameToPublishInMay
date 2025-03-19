@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   object1: {fileID: 5348322161251707193}
-  object2: {fileID: 6604930277738360070, guid: 8ddf0db77d6757e4480ca3cdd1a2a279, type: 3}
+  object2: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
   object3: {fileID: 7403420674531380175, guid: b694eedea620b8e428a4e140113cd68f, type: 3}
 --- !u!114 &7319331503143951290
 MonoBehaviour:

@@ -1936,9 +1936,8 @@ GameObject:
   - component: {fileID: 1373261917467787275}
   - component: {fileID: 3551965815698279490}
   - component: {fileID: 9087978298271585996}
-  - component: {fileID: 6574654164674313945}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Coba
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2066,33 +2065,6 @@ MonoBehaviour:
     m_Extent: {x: 0.49879885, y: 0.4969043, z: 0}
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
---- !u!50 &6574654164674313945
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7403420674531380175}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &7917514611177478999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,9 +2251,9 @@ GameObject:
   - component: {fileID: 3483319192895106652}
   - component: {fileID: 1722862489982182016}
   - component: {fileID: 8144738119671848600}
-  - component: {fileID: 1879262200550323555}
   - component: {fileID: 8157769374630544358}
   - component: {fileID: 4823763840055186338}
+  - component: {fileID: 1891882487240598848}
   m_Layer: 0
   m_Name: bone_17
   m_TagString: Bones
@@ -2330,7 +2302,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!58 &8144738119671848600
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2361,24 +2333,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.03, y: 0}
   m_Radius: 0.5
---- !u!114 &1879262200550323555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8000754223579861609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfcd57c1430bc324982bb443070e4a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8157769374630544358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2404,8 +2364,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   object1: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  object2: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
-  object3: {fileID: 7403420674531380175}
+  object2: {fileID: 7403420674531380175}
+  object3: {fileID: 7403420674531380175, guid: b694eedea620b8e428a4e140113cd68f, type: 3}
+--- !u!114 &1891882487240598848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8000754223579861609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0484118f677bcdb4196a5c64a8d58781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8625445805942706041
 GameObject:
   m_ObjectHideFlags: 0
