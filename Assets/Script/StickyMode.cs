@@ -47,6 +47,7 @@ public class StickyMode : MonoBehaviour
             SetGravityForAllBones(0);
         }else if(HitDown.collider == null && HitLeft.collider == null && HitUp.collider == null && HitRight.collider == null) {
             //rb.gravityScale = 1;
+            rb.velocity = new Vector2(moveX * 10, rb.velocity.y);
             SetGravityForAllBones(1);
         }
 

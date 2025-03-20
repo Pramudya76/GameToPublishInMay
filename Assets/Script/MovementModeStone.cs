@@ -6,7 +6,7 @@ public class MovementModeStone : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float moveSpeed = 5f;
-    private float jumpForce = 5f;
+    private float jumpForce = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +25,16 @@ public class MovementModeStone : MonoBehaviour
             Debug.Log("Jalan");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1f);
         }
+
+        
+
     }
+
+    // public void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if(collision.gameObject.tag == "Walls" && Input.GetKey(KeyCode.A) || collision.gameObject.tag == "Walls" && Input.GetKey(KeyCode.D)) {
+    //         rb.velocity = new Vector2.zero;
+    //     } 
+    // }
+
 }
