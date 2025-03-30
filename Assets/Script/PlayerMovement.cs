@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float moveSpeed = 8f;
     private float jumpForce = 12f;
+    private bool isGround;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        if(Input.GetKeyDown(KeyCode.Space) && isGround) {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * 10);
         }
 
@@ -36,8 +37,20 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        if(collision.gameObject.tag == "Ground") {
+            isGround = true;
+        }
+
     }
-    
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Ground") {
+            isGround = false;
+        }
+    }
+
+
     IEnumerator CDChangeScene() {
         yield return new WaitForSeconds(0.1f);
         GM.ChangeScene();     

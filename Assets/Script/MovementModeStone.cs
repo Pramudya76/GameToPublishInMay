@@ -7,10 +7,14 @@ public class MovementModeStone : MonoBehaviour
     private Rigidbody2D rb;
     private float moveSpeed = 5f;
     private float jumpForce = 1f;
+    private bool isGround;
+    private GameManager GM;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GameObject GameManagerObject = GameObject.FindWithTag("GameManager");
+        GM = GameManagerObject.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -21,8 +25,8 @@ public class MovementModeStone : MonoBehaviour
 
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log("Jalan");
+        if(Input.GetKeyDown(KeyCode.Space) && isGround) {
+            //Debug.Log("Jalan");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1f);
         }
 
@@ -30,11 +34,31 @@ public class MovementModeStone : MonoBehaviour
 
     }
 
-    // public void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if(collision.gameObject.tag == "Walls" && Input.GetKey(KeyCode.A) || collision.gameObject.tag == "Walls" && Input.GetKey(KeyCode.D)) {
-    //         rb.velocity = new Vector2.zero;
-    //     } 
-    // }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Ground") {
+            isGround = true;
+        }else {
+            isGround = false;
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Star") {
+            StartCoroutine(CDChangeScene());
+            Destroy(collision.gameObject);
+        }
+    }
+
+    IEnumerator CDChangeScene() {
+        yield return new WaitForSeconds(0.1f);
+        GM.ChangeScene();     
+    }
+
+    
+
+
 
 }
