@@ -1,14 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Slider volumeMusic;
+    public AudioMixer mixer;
+    public GameObject Audio;
+    public AudioSource music;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
     {
+        Audio.gameObject.SetActive(false);
+        if(PlayerPrefs.HasKey("vol")) {
+            float saveVol = PlayerPrefs.GetFloat("vol");
+            volumeMusic.value = saveVol;
+        }else {
+            mixer.SetFloat("vol", 0);
+            volumeMusic.value = 0f;
+        }
+        music.Play();
+
+
+        //Time.timeScale = 1;
         // if(!PlayerPrefs.HasKey("SceneIndex")) {
         //     PlayerPrefs.SetInt("SceneIndex", 1);
         //     PlayerPrefs.Save();
@@ -19,7 +37,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+            Audio.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     public void ChangeScene() {
@@ -30,5 +51,30 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(nextSceneIndex);
     }
+
+
+    public void ExitGame() {
+        PlayerPrefs.DeleteKey("vol");
+        Application.Quit();
+    }
+
+    public void AudioSetting() {
+        Audio.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void ExitAudioSetting() {
+        Audio.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void settingAudioMusic() {
+        mixer.SetFloat("vol", volumeMusic.value);
+        PlayerPrefs.SetFloat("vol", volumeMusic.value);
+        PlayerPrefs.Save();
+    }
+
+
+
 
 }
