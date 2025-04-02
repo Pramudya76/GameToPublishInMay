@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
 
         if(Input.GetKeyDown(KeyCode.Space) && isGround) {
+            GM.jumpSound.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * 10);
         }
 

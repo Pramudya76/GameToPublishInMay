@@ -8,9 +8,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Slider volumeMusic;
-    public AudioMixer mixer;
+    public Slider volumeMaster;
+    public AudioMixer mixerMusic;
+    public AudioMixer mixerMaster;
     public GameObject Audio;
     public AudioSource music;
+    public AudioSource jumpSound;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,7 @@ public class GameManager : MonoBehaviour
             float saveVol = PlayerPrefs.GetFloat("vol");
             volumeMusic.value = saveVol;
         }else {
-            mixer.SetFloat("vol", 0);
+            mixerMusic.SetFloat("vol", 0);
             volumeMusic.value = 0f;
         }
         music.Play();
@@ -69,9 +72,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void settingAudioMusic() {
-        mixer.SetFloat("vol", volumeMusic.value);
+        mixerMusic.SetFloat("vol", volumeMusic.value);
         PlayerPrefs.SetFloat("vol", volumeMusic.value);
         PlayerPrefs.Save();
+    }
+
+    public void settingAudioMaster() {
+        mixerMaster.SetFloat("MasterVolume", volumeMaster.value);
     }
 
 
