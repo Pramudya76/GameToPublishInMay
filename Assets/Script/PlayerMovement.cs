@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         GameObject GameManagerObject = GameObject.FindWithTag("GameManager");
         GM = GameManagerObject.GetComponent<GameManager>();
+        
     }
 
     // Update is called once per frame

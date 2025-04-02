@@ -14,6 +14,14 @@ public class GameManager : MonoBehaviour
     public GameObject Audio;
     public AudioSource music;
     public AudioSource jumpSound;
+    public AudioSource deadSound;
+    private Vector3 startPosition;
+    private GameObject player;
+    private GameObject StoneMode;
+    private GameObject StickyMode;
+    public GameObject playerPrefabs;
+    public GameObject StonePrefabs;
+    public GameObject StickyPrefabs;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +34,10 @@ public class GameManager : MonoBehaviour
             mixerMusic.SetFloat("vol", 0);
             volumeMusic.value = 0f;
         }
+        player = GameObject.FindWithTag("Player");
+        StoneMode = GameObject.FindWithTag("StoneMode");
+        StickyMode = GameObject.FindWithTag("StickyMode");
+        startPosition = player.transform.position;
         music.Play();
 
 
@@ -44,6 +56,12 @@ public class GameManager : MonoBehaviour
             Audio.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
+
+        // if(player == null) {
+        //     player = Instantiate(playerPrefabs, startPosition, Quaternion.identity);
+        //     deadSound.Play();
+        // }
+        
     }
 
     public void ChangeScene() {
