@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefabs;
     public GameObject StonePrefabs;
     public GameObject StickyPrefabs;
+    public bool isDead;
+    public string mode;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,10 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         StoneMode = GameObject.FindWithTag("StoneMode");
         StickyMode = GameObject.FindWithTag("StickyMode");
-        startPosition = player.transform.position;
+        if(player != null) {
+            startPosition = player.transform.position;
+            Debug.Log("Berjalan");
+        }
         music.Play();
 
 
@@ -57,11 +62,27 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        // if(player == null) {
-        //     player = Instantiate(playerPrefabs, startPosition, Quaternion.identity);
-        //     deadSound.Play();
-        // }
         
+        
+        
+    }
+
+    public void callRespawn() {
+        StartCoroutine(Respawn());
+    }
+
+    IEnumerator Respawn() {
+        yield return new WaitForSeconds(0.1f);
+        if(player == null && isDead && mode == "player") {
+            player = Instantiate(playerPrefabs, startPosition, Quaternion.identity);
+            deadSound.Play();
+        }else if(StoneMode == null && isDead && mode == "StoneMode") {
+            StoneMode = Instantiate(StonePrefabs, startPosition, Quaternion.identity);
+            deadSound.Play();
+        }else if(StickyMode == null && isDead && mode == "StickyMode") {
+            StickyMode = Instantiate(StickyPrefabs, startPosition, Quaternion.identity);
+            deadSound.Play();
+        }
     }
 
     public void ChangeScene() {
