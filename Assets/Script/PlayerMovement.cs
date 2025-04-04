@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Star") {
+            GM.CatcheStarSound.Play();
             StartCoroutine(CDChangeScene());
             Destroy(collision.gameObject);
         }
@@ -54,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     IEnumerator CDChangeScene() {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
         GM.ChangeScene();     
     }
 

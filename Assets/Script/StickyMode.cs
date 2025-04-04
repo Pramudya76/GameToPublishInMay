@@ -7,6 +7,7 @@ public class StickyMode : MonoBehaviour
     private Rigidbody2D rb;
     private LayerMask TargetLayer;
     private GameManager GM;
+    private bool walk = false;
     // private LayerMask ceilingLayer;
     // private LayerMask groundLayer;
     // Start is called before the first frame update
@@ -90,7 +91,14 @@ public class StickyMode : MonoBehaviour
             }
         }
         
-        
+        if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) {
+            GM.StickySound.Stop();
+            walk = true;
+        }
+        if(Input.GetKey(KeyCode.A) && walk || Input.GetKey(KeyCode.D) && walk) {
+            GM.StickySound.Play();
+            StartCoroutine(CDWalk());
+        }
         
         
         
@@ -100,6 +108,11 @@ public class StickyMode : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.down * distance, Color.blue);
         Debug.DrawRay(transform.position, Vector2.up * distance, Color.white);
 
+    }
+
+    IEnumerator CDWalk() {
+        yield return new WaitForSeconds(0.1f);
+        walk = false;
     }
 
 

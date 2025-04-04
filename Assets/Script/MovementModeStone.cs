@@ -9,6 +9,7 @@ public class MovementModeStone : MonoBehaviour
     private float jumpForce = 1f;
     private bool isGround;
     private GameManager GM;
+    private bool walk = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +31,23 @@ public class MovementModeStone : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1f);
         }
 
+        if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) {
+            GM.StoneSound.Stop();
+            walk = true;
+        }
+        if(Input.GetKey(KeyCode.A) && walk || Input.GetKey(KeyCode.D) && walk) {
+            GM.StoneSound.Play();
+            StartCoroutine(CDWalk());
+        }
+
+        
         
 
+    }
+
+    IEnumerator CDWalk() {
+        yield return new WaitForSeconds(0.1f);
+        walk = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

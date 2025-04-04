@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
     public AudioSource music;
     public AudioSource jumpSound;
     public AudioSource deadSound;
+    public AudioSource StickySound;
+    public AudioSource StoneSound;
+    public AudioSource GateSound;
+    public AudioSource CatcheStarSound;
+    public AudioSource WinGameSound;
     private Vector3 startPosition;
     private GameObject player;
     private GameObject StoneMode;
