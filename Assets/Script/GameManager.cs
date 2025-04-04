@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject StickyPrefabs;
     public bool isDead;
     public string mode;
+    public GameObject Thorn;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         StoneMode = GameObject.FindWithTag("StoneMode");
         StickyMode = GameObject.FindWithTag("StickyMode");
+        //Thorn = GameObject.FindWithTag("Thorns");
         if(player != null) {
             startPosition = player.transform.position;
             Debug.Log("Berjalan");
@@ -119,6 +121,14 @@ public class GameManager : MonoBehaviour
     public void settingAudioMaster() {
         mixerMaster.SetFloat("MasterVolume", volumeMaster.value);
     }
+
+
+    public IEnumerator callThornsBack(Vector3 thornsPosition) {
+        yield return new WaitForSeconds(3f);
+        Debug.Log("jalannnnnn");
+        Instantiate(Thorn, thornsPosition, Thorn.transform.rotation);
+    }
+
 
 
 
