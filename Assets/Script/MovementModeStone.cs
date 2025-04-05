@@ -38,11 +38,14 @@ public class MovementModeStone : MonoBehaviour
         if(Input.GetKey(KeyCode.A) && walk || Input.GetKey(KeyCode.D) && walk) {
             GM.StoneSound.Play();
             StartCoroutine(CDWalk());
-        }
+        } 
 
-        
-        
+    }
 
+    void OnDestroy()
+    {
+        GM.StoneSound.Stop();
+        
     }
 
     IEnumerator CDWalk() {

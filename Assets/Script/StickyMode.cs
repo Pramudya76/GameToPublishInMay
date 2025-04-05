@@ -110,6 +110,11 @@ public class StickyMode : MonoBehaviour
 
     }
 
+    void OnDestroy()
+    {
+        GM.StickySound.Stop();
+    }
+
     IEnumerator CDWalk() {
         yield return new WaitForSeconds(0.1f);
         walk = false;

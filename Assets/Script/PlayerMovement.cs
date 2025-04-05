@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Star") {
             GM.CatcheStarSound.Play();
-            StartCoroutine(CDChangeScene());
+            GM.StartCoroutine(GM.CDChangeScene());
             Destroy(collision.gameObject);
         }
 
@@ -54,10 +54,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    IEnumerator CDChangeScene() {
-        yield return new WaitForSeconds(1f);
-        GM.ChangeScene();     
-    }
+    
 
 
 }

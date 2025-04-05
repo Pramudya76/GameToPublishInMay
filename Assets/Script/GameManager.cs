@@ -146,7 +146,10 @@ public class GameManager : MonoBehaviour
         Instantiate(Thorn, thornsPosition, Thorn.transform.rotation);
     }
 
-
+    public IEnumerator CDChangeScene() {
+        yield return new WaitForSeconds(1.5f);
+        ChangeScene();     
+    }
 
 
 
