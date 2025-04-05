@@ -30,11 +30,14 @@ public class GameManager : MonoBehaviour
     public bool isDead;
     public string mode;
     public GameObject Thorn;
+    public GameObject GameWinPanel;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         Audio.gameObject.SetActive(false);
+        GameWinPanel.gameObject.SetActive(false);
         if(PlayerPrefs.HasKey("vol")) {
             float saveVol = PlayerPrefs.GetFloat("vol");
             volumeMusic.value = saveVol;
@@ -71,7 +74,6 @@ public class GameManager : MonoBehaviour
 
         
         
-        
     }
 
     public void callRespawn() {
@@ -95,10 +97,20 @@ public class GameManager : MonoBehaviour
     public void ChangeScene() {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
-            nextSceneIndex = 0; // Scene pertama (Lv1)
+            WinGameSound.Play();
+            GameWinPanel.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            return;
+            //nextSceneIndex = 0; // Scene pertama (Lv1)
         }
 
         SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    public void backToMenu() {
+        SceneManager.LoadScene("MainMenu");
+        WinGameSound.Stop();
+
     }
 
 
