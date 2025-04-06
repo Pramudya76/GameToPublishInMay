@@ -45,6 +45,13 @@ public class GameManager : MonoBehaviour
             mixerMusic.SetFloat("vol", 0);
             volumeMusic.value = 0f;
         }
+        if(PlayerPrefs.HasKey("MasterVolume")) {
+            float saveMaster = PlayerPrefs.GetFloat("MasterVolume");
+            volumeMaster.value = saveMaster;
+        }else {
+            mixerMaster.SetFloat("MasterVolume", 0);
+            volumeMaster.value = 0f;
+        }
         player = GameObject.FindWithTag("Player");
         StoneMode = GameObject.FindWithTag("StoneMode");
         StickyMode = GameObject.FindWithTag("StickyMode");
@@ -55,13 +62,6 @@ public class GameManager : MonoBehaviour
         }
         music.Play();
 
-
-        //Time.timeScale = 1;
-        // if(!PlayerPrefs.HasKey("SceneIndex")) {
-        //     PlayerPrefs.SetInt("SceneIndex", 1);
-        //     PlayerPrefs.Save();
-        // }
-        //SceneIndex = PlayerPrefs.GetInt("SceneIndex", 1);     
     }
 
     // Update is called once per frame
@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame() {
         PlayerPrefs.DeleteKey("vol");
+        PlayerPrefs.DeleteKey("MasterVolume");
         Application.Quit();
     }
 
@@ -137,6 +138,8 @@ public class GameManager : MonoBehaviour
 
     public void settingAudioMaster() {
         mixerMaster.SetFloat("MasterVolume", volumeMaster.value);
+        PlayerPrefs.SetFloat("MasterVolume", volumeMaster.value);
+        PlayerPrefs.Save();
     }
 
 
