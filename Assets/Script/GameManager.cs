@@ -154,6 +154,10 @@ public class GameManager : MonoBehaviour
         ChangeScene();     
     }
 
+    public void GoinLevel(string level) {
+        SceneManager.LoadScene(level);
+    }
+
 
 
 }

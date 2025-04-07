@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,13 +11,15 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed = 8f;
     private float jumpForce = 15f;
     private bool isGround;
+    private LevelManager LM;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         GameObject GameManagerObject = GameObject.FindWithTag("GameManager");
         GM = GameManagerObject.GetComponent<GameManager>();
-        
+        GameObject LevelManagerObject = GameObject.FindWithTag("LevelManager");
+        LM = LevelManagerObject.GetComponent<LevelManager>();
     }
 
     // Update is called once per frame
@@ -36,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Star") {
             GM.CatcheStarSound.Play();
+            LM.LevelSystem();
             GM.StartCoroutine(GM.CDChangeScene());
             Destroy(collision.gameObject);
         }

@@ -13,6 +13,7 @@ TagManager:
   - Walls
   - StoneMode
   - StickyMode
+  - LevelManager
   layers:
   - Default
   - TransparentFX
