@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour
     {
         if(isRunning) {
             waktu += Time.deltaTime;
-            Debug.Log(waktu);
+            //Debug.Log(waktu);
         }
     }
 
