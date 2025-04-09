@@ -154,6 +154,9 @@ public class GameManager : MonoBehaviour
         ChangeScene();     
     }
 
+    public void GoToMainMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
 
 
 
