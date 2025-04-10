@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public string mode;
     public GameObject Thorn;
     public GameObject GameWinPanel;
+    public GameObject FloorPrefabs;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
@@ -156,6 +157,15 @@ public class GameManager : MonoBehaviour
 
     public void GoToMainMenu() {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void SpawnFloor(Vector3 positionFloor) {
+        StartCoroutine(CDSpawnFloorAfterDestroy(positionFloor));
+    }
+
+    IEnumerator CDSpawnFloorAfterDestroy(Vector3 positionFloor) {
+        yield return new WaitForSeconds(3f);
+        Instantiate(FloorPrefabs, positionFloor, Quaternion.identity);
     }
 
 
