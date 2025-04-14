@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private GameManager GM;
     private Rigidbody2D rb;
     private float moveSpeed = 8f;
-    private float jumpForce = 15f;
+    private float jumpForce = 13f;
     private bool isGround;
     private LevelManager LM;
     // Start is called before the first frame update

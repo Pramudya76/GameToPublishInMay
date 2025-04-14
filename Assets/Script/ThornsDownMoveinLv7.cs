@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThornsDownMoveinLv7 : MonoBehaviour
 {
     public float moveDistance;
-    private float moveSpeed = 0.5f;
+    private float moveSpeed = 0.8f;
     private float startY;
     private bool move = false;
     private bool moving = true;

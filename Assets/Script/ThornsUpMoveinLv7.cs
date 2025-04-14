@@ -36,7 +36,7 @@ public class ThornsUpMoveinLv7 : MonoBehaviour
 
    IEnumerator CDStay() {
         move = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
 
         moving = !moving;
         float newY = moving ? startY + moveDistance : startY;
