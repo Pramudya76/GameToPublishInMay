@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 72d13530d6aa6fd4faf5b9928d468459
+guid: 4f3011352468aee458f2a72eeda302dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5107950004610200008
-    second: bg (2)_0
+      213: -230194567796169486
+    second: Tentacle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg (2)_0
+      name: Tentacle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 193
+        y: 17
+        width: 93
+        height: 459
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c1fe33577513e640800000000000000
-      internalID: 5107950004610200008
+      spriteID: 2f4e84d924f2eccf0800000000000000
+      internalID: -230194567796169486
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      bg (2)_0: 5107950004610200008
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -60,7 +60,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -194,9 +194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175, guid: b694eedea620b8e428a4e140113cd68f, type: 3}
-  StonePrefabs: {fileID: 5348322161251707193}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!58 &8007516306198319761
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -175,9 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &917110031285922912
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,9 +350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &923147897075207531
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,9 +525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &2437328928859754001
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,9 +700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &3105670570409159137
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,9 +875,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &4063002738170830844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,9 +1050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &4803501652295865200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,9 +1225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &5007504888744360857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,9 +1400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &5448162764339817934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,9 +1575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &5909910567502397812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,9 +1750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &7331544475435510051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,9 +1925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &7403420674531380175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,7 +1998,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2301,9 +2268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &8000754223579861609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,9 +2391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!114 &4823763840055186338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,9 +2581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &8627897181361438089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,9 +2756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &9000548938878481003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,9 +2931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
 --- !u!1 &9152301906055815821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,6 +3106,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c28b4eab5e0bfa41af01705b8769ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: {fileID: 7403420674531380175}
-  StonePrefabs: {fileID: 5348322161251707193, guid: 66c57e19c5cf33949bbbbcc8fd91d889, type: 3}
-  StickyPrefabs: {fileID: 7403420674531380175, guid: 967c55552529bfd47b622c06c1881c8a, type: 3}
