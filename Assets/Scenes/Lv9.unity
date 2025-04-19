@@ -11836,6 +11836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d4a63dcee19014e9775ec7bf8b9935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bintang2: 45
+  bintang3: 30
 --- !u!4 &1299968740
 Transform:
   m_ObjectHideFlags: 0
@@ -14399,7 +14401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1373261917467787275, guid: b694eedea620b8e428a4e140113cd68f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.95
+      value: -5.09
       objectReference: {fileID: 0}
     - target: {fileID: 1373261917467787275, guid: b694eedea620b8e428a4e140113cd68f, type: 3}
       propertyPath: m_LocalPosition.z

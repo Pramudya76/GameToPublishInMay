@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour
 {
     private float waktu;
     private bool isRunning = true;
+    public float bintang2;
+    public float bintang3;
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +39,9 @@ public class LevelManager : MonoBehaviour
     }
 
     public int hitungBintang(float waktu) {
-        if(waktu <= 10) {
+        if(waktu <= bintang3) {
             return 3;
-        }else if(waktu <= 20) {
+        }else if(waktu <= bintang2) {
             return 2;
         }else {
             return 1;

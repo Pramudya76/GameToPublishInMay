@@ -27,7 +27,7 @@ public class DestroyPlayer : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Thorns") {
-            Debug.Log("Kena duri");
+            //Debug.Log("Kena duri");
             if(player != null) {
                 Debug.Log("player jalan");
                 GM.mode = "player";
@@ -64,7 +64,45 @@ public class DestroyPlayer : MonoBehaviour
         }       
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy") {
+            //Debug.Log("Kena duri");
+            if(player != null) {
+                Debug.Log("player jalan");
+                GM.mode = "player";
+                GM.isDead = true;
+                GM.callRespawn();
+                Destroy(player);
+                player = null;
+                
+                //GM.Respawn();
+                //player = Instantiate(playerPrefabs, startPosition, Quaternion.identity);
+            }else if(StoneMode != null) {
+                GM.mode = "StoneMode";
+                GM.isDead = true;
+                GM.callRespawn();
+                Destroy(StoneMode);
+                StoneMode = null;
+                
+                //GM.Respawn();
+                //StoneMode = Instantiate(StonePrefabs, startPosition, Quaternion.identity);
+                
+            }else if(StickyMode != null) {
+                GM.mode = "StickyMode";
+                GM.isDead = true;
+                GM.callRespawn();
+                Destroy(StickyMode);
+                StickyMode = null;
+                
+                //GM.Respawn();
+                //StickyMode = Instantiate(StickyPrefabs, startPosition, Quaternion.identity);
+                
+            }
+            //GM.isDead = false;
+            //Instantiate(playerPrefabs, startPosition, Quaternion.identity);
+        }  
+    }
 
 
 }

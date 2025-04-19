@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5870344113121461823}
   - component: {fileID: 7319331503143951290}
   - component: {fileID: 8007516306198319761}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ModeStone
   m_TagString: StoneMode
   m_Icon: {fileID: 0}

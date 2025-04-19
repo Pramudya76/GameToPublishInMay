@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 495134105474888908}
   - component: {fileID: 4819885929884134738}
   - component: {fileID: 1876349371801404118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_15
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 6031733909464450983}
   - component: {fileID: 5704452686393833668}
   - component: {fileID: 5870493631739263213}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_5
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 9205491519574543944}
   - component: {fileID: 2617295611114104299}
   - component: {fileID: 4095833499485529409}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_9
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 99599016987478151}
   - component: {fileID: 4306019595202618696}
   - component: {fileID: 6936739226543035245}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_13
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 4613760942601582713}
   - component: {fileID: 7844614274764170040}
   - component: {fileID: 3873750605915529239}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_16
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 7545328621610920620}
   - component: {fileID: 3048367771422333103}
   - component: {fileID: 805682094438359515}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_7
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 60415267620437963}
   - component: {fileID: 6428958344152493536}
   - component: {fileID: 9153464717924053861}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_2
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -1240,7 +1240,7 @@ GameObject:
   - component: {fileID: 704450931064324183}
   - component: {fileID: 1018045349491567429}
   - component: {fileID: 4712787477064848830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_6
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -1415,7 +1415,7 @@ GameObject:
   - component: {fileID: 5025121482097754754}
   - component: {fileID: 8641760084036696923}
   - component: {fileID: 593667398147746253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_10
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -1590,7 +1590,7 @@ GameObject:
   - component: {fileID: 6610844932350031969}
   - component: {fileID: 2934455142847115587}
   - component: {fileID: 481226640280821904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_14
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -1765,7 +1765,7 @@ GameObject:
   - component: {fileID: 474995631756454736}
   - component: {fileID: 3248657450647439565}
   - component: {fileID: 313420741825444721}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_8
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -1936,7 +1936,7 @@ GameObject:
   - component: {fileID: 1373261917467787275}
   - component: {fileID: 3551965815698279490}
   - component: {fileID: 9087978298271585996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coba
   m_TagString: StickyMode
   m_Icon: {fileID: 0}
@@ -2080,7 +2080,7 @@ GameObject:
   - component: {fileID: 2066835057992182605}
   - component: {fileID: 2152593374652374332}
   - component: {fileID: 1782104300859041522}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_4
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -2254,7 +2254,7 @@ GameObject:
   - component: {fileID: 8157769374630544358}
   - component: {fileID: 4823763840055186338}
   - component: {fileID: 1891882487240598848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_17
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -2393,7 +2393,7 @@ GameObject:
   - component: {fileID: 7587058002782045829}
   - component: {fileID: 3271320787948750627}
   - component: {fileID: 1465893063231288856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_3
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -2568,7 +2568,7 @@ GameObject:
   - component: {fileID: 4036609707003872686}
   - component: {fileID: 2691034012189646129}
   - component: {fileID: 4092733293821156605}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_11
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -2743,7 +2743,7 @@ GameObject:
   - component: {fileID: 215887914891495950}
   - component: {fileID: 1151616109118504168}
   - component: {fileID: 1786965995652941111}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_12
   m_TagString: Bones
   m_Icon: {fileID: 0}
@@ -2918,7 +2918,7 @@ GameObject:
   - component: {fileID: 4995427415469105645}
   - component: {fileID: 6323944279090295000}
   - component: {fileID: 3571595018595095209}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone_1
   m_TagString: Bones
   m_Icon: {fileID: 0}

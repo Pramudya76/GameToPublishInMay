@@ -6566,6 +6566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d4a63dcee19014e9775ec7bf8b9935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bintang2: 30
+  bintang3: 15
 --- !u!4 &701439662
 Transform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class StickyMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TargetLayer = LayerMask.GetMask("Walls", "Ground","ceilingLayer");
+        TargetLayer = LayerMask.GetMask("Walls", "Ground","Obstacle");
         // ceilingLayer = LayerMask.GetMask("ceilingLayer");
         // groundLayer = LayerMask.GetMask("Ground");
         rb = GetComponent<Rigidbody2D>();

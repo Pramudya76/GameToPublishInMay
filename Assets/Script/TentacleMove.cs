@@ -8,22 +8,33 @@ public class TentacleMove : MonoBehaviour
     private float startX;
     public float moveTentacle = 3f;
     private float moveSpeed = 1f;
-    public float waktuJeda;
-    // Start is called before the first frame update
+    public float waktuJeda; // Time offset for the sine wave
+    public GameObject Enemy; // Parent object to follow
+    
     void Start()
     {
-        startY = transform.position.y;
-        startX = transform.position.x;
+        // Store the initial offset from the parent when the game starts
+        if (Enemy != null)
+        {
+            startX = transform.position.x - Enemy.transform.position.x;
+            startY = transform.position.y - Enemy.transform.position.y;
+        }
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float moveY = startY + Mathf.Sin((Time.time + waktuJeda) * moveSpeed) * moveTentacle;
-        float moveX = startX + Mathf.Sin((Time.time + waktuJeda) * moveSpeed) * moveTentacle;
-        transform.position = new Vector2(moveX, moveY);
+        if (Enemy != null)
+        {
+            // Calculate sine movement
+            float moveY = Mathf.Sin((Time.time + waktuJeda) * moveSpeed) * moveTentacle;
+            float moveX = Mathf.Sin((Time.time + waktuJeda) * moveSpeed) * moveTentacle;
+            
+            // Calculate new position relative to parent (Enemy)
+            Vector3 newPosition = Enemy.transform.position + new Vector3(startX + moveX, startY + moveY, 0);
+            
+            // Apply the new position
+            transform.position = newPosition;
+        }
     }
-
-    
-
 }

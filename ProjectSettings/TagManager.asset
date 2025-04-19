@@ -14,6 +14,7 @@ TagManager:
   - StoneMode
   - StickyMode
   - LevelManager
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Thorns
   - Ground
   - Player
-  - 
+  - Obstacle
   - 
   - 
   - 
