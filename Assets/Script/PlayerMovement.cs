@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Star") {
+            LM.isLevelCompleted = true;
             GM.CatcheStarSound.Play();
             LM.LevelSystem();
             GM.StartCoroutine(GM.CDChangeScene());

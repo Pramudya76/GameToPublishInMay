@@ -8,6 +8,7 @@ public class StickyMode : MonoBehaviour
     private LayerMask TargetLayer;
     private GameManager GM;
     private bool walk = false;
+    private LevelManager LM;
     // private LayerMask ceilingLayer;
     // private LayerMask groundLayer;
     // Start is called before the first frame update
@@ -19,6 +20,8 @@ public class StickyMode : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         GameObject GameManagerObject = GameObject.FindWithTag("GameManager");
         GM = GameManagerObject.GetComponent<GameManager>();
+        GameObject LevelManagerObject = GameObject.FindWithTag("LevelManager");
+        LM = LevelManagerObject.GetComponent<LevelManager>();
     }
 
     // Update is called once per frame
@@ -140,6 +143,9 @@ public class StickyMode : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Star") {
+            LM.isLevelCompleted = true;
+            GM.CatcheStarSound.Play();
+            LM.LevelSystem();
             StartCoroutine(CDChangeScene());
             Destroy(collision.gameObject);
         }

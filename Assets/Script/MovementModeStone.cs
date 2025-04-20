@@ -10,12 +10,15 @@ public class MovementModeStone : MonoBehaviour
     private bool isGround;
     private GameManager GM;
     private bool walk = false;
+    private LevelManager LM;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         GameObject GameManagerObject = GameObject.FindWithTag("GameManager");
         GM = GameManagerObject.GetComponent<GameManager>();
+        GameObject LevelManagerObject = GameObject.FindWithTag("LevelManager");
+        LM = LevelManagerObject.GetComponent<LevelManager>();
     }
 
     // Update is called once per frame
@@ -66,6 +69,9 @@ public class MovementModeStone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Star") {
+            LM.isLevelCompleted = true;
+            GM.CatcheStarSound.Play();
+            LM.LevelSystem();
             StartCoroutine(CDChangeScene());
             Destroy(collision.gameObject);
         }

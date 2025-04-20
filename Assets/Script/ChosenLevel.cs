@@ -19,6 +19,9 @@ public class ChosenLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // PlayerPrefs.DeleteKey("Star_Level10");
+        // PlayerPrefs.DeleteKey("Timer_Level10"); // Jika kamu juga ingin reset waktu
+        // PlayerPrefs.Save();
         for (int i = 0; i < level.Length; i++)
         {
             levelKe = i + 1;
