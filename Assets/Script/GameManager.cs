@@ -61,6 +61,9 @@ public class GameManager : MonoBehaviour
             startPosition = player.transform.position;
             Debug.Log("Berjalan");
         }
+
+
+
         music.Play();
 
     }
@@ -102,7 +105,7 @@ public class GameManager : MonoBehaviour
             GameWinPanel.gameObject.SetActive(true);
             Time.timeScale = 0;
             return;
-            //nextSceneIndex = 0; // Scene pertama (Lv1)
+            
         }
 
         SceneManager.LoadScene(nextSceneIndex);

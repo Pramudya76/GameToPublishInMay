@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BerubahBentuk : MonoBehaviour
 {
-    private GameObject player;
+    //private GameObject player;
     public GameObject object1;
     public GameObject object2;
     public GameObject object3;

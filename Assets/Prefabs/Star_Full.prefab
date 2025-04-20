@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5620395451119000426}
   - component: {fileID: 7115408741552395183}
   - component: {fileID: 1657570971543083397}
+  - component: {fileID: 58464049720703607}
   m_Layer: 0
   m_Name: Star_Full
   m_TagString: Star
@@ -164,3 +165,19 @@ PolygonCollider2D:
       - {x: 0.13, y: -0.85999995}
       - {x: 0.51, y: -1.06}
   m_UseDelaunayMesh: 0
+--- !u!114 &58464049720703607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2560016132571760610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a30117e06cbbc4428b298e0dfcb5a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeedRotation: 50
+  moveSpeed: 5
+  moveRotation: 45
+  moveDirection: 0.01
