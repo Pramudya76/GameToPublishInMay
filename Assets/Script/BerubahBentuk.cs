@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -10,30 +11,45 @@ public class BerubahBentuk : MonoBehaviour
     public GameObject object2;
     public GameObject object3;
     private Vector2 posisiObjectAwal;
+    public String checkMode;
 
     // Start is called before the first frame update
     void Start()
     {
         //GameObject playerObject = GameObject.FindWithTag("Bones");
         //player = GetComponentInParent<GameObject>();
+        posisiObjectAwal = transform.position;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         posisiObjectAwal = transform.position;
-        if(Input.GetKeyDown(KeyCode.Alpha2)) {
+        Debug.Log(posisiObjectAwal);
+        if(Input.GetKeyDown(KeyCode.Alpha2) && checkMode != "Mode2") {
+            checkMode = "Mode2";
+            //posisiObjectAwal = transform.position;
             //Destroy(gameObject);
             Instantiate(object1, posisiObjectAwal, Quaternion.identity);
             Debug.Log("Game object : " + gameObject.name);
+            //Debug.Log(clone.transform.position);
             DestroyParent();
-        }else if(Input.GetKeyDown(KeyCode.Alpha3)) {
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha3) && checkMode != "Mode3") {
+            checkMode = "Mode3";
+            //posisiObjectAwal = transform.position;
             Instantiate(object2, posisiObjectAwal, Quaternion.identity);
             Debug.Log("Game object : " + gameObject.name);
+            //Debug.Log(clone.transform.position);
             DestroyParent();
-        }else if(Input.GetKeyDown(KeyCode.Alpha1)) {
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha1) && checkMode != "Mode1") {
+            checkMode = "Mode1";
+            //posisiObjectAwal = transform.position;
             Instantiate(object3, posisiObjectAwal, Quaternion.identity);
             Debug.Log("Game object : " + gameObject.name);
+            //Debug.Log(clone.transform.position);
             DestroyParent();
         }
 
@@ -41,8 +57,10 @@ public class BerubahBentuk : MonoBehaviour
     }
     public void DestroyParent() {
         if(transform.parent != null) {
+            posisiObjectAwal = transform.parent.position;
             Destroy(transform.parent.gameObject);
         }else {
+            posisiObjectAwal = transform.position;
             Destroy(gameObject);
         }
     }
