@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -32,11 +33,13 @@ public class GameManager : MonoBehaviour
     public GameObject Thorn;
     public GameObject GameWinPanel;
     public GameObject FloorPrefabs;
+    //private LevelManager LM;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1;
+        //LM = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
         Audio.gameObject.SetActive(false);
         GameWinPanel.gameObject.SetActive(false);
         if(PlayerPrefs.HasKey("vol")) {
@@ -98,6 +101,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // public void LevelDoneScene() {
+    //     int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+    //     if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
+    //         WinGameSound.Play();
+    //         GameWinPanel.gameObject.SetActive(true);
+    //         Time.timeScale = 0;
+    //     }else {
+    //         GameWinPanel.gameObject.SetActive(true);
+    //         LM.LevelDonePanel();
+    //         Time.timeScale = 0;
+    //     }
+    //     //PlayerPrefs.SetInt("HasSaveData", 1);
+    //     //SceneManager.LoadScene(nextSceneIndex);
+    // }
+
     public void ChangeScene() {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
@@ -107,7 +125,7 @@ public class GameManager : MonoBehaviour
             return;
             
         }
-
+        PlayerPrefs.SetInt("HasSaveData", 1);
         SceneManager.LoadScene(nextSceneIndex);
     }
 
@@ -155,7 +173,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator CDChangeScene() {
         yield return new WaitForSeconds(1.5f);
-        ChangeScene();     
+        ChangeScene();    
     }
 
     public void GoToMainMenu() {
@@ -170,6 +188,13 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Instantiate(FloorPrefabs, positionFloor, Quaternion.identity);
     }
+
+    public void newGame() {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("HasSaveData", 1);
+        ChangeScene();
+    }
+
 
 
 

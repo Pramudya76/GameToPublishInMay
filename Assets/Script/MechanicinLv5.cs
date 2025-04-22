@@ -9,7 +9,7 @@ public class MechanicinLv5 : MonoBehaviour
     private Vector3 posisiWall;
     private Vector3 posisiAwalWall;
     public GameObject wall;
-    private float moveSpeed = 2f;
+    private float moveSpeed = 0.15f;
     private bool moving;
     // Start is called before the first frame update
     void Start()

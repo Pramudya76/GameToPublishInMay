@@ -16,16 +16,20 @@ public class ChosenLevel : MonoBehaviour
     public Transform parentTransform;
     private int star;
     private int levelKe;
+    private GameManager GM;
     // Start is called before the first frame update
     void Start()
     {
         // PlayerPrefs.DeleteKey("Star_Level10");
         // PlayerPrefs.DeleteKey("Timer_Level10"); // Jika kamu juga ingin reset waktu
         // PlayerPrefs.Save();
+        GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         for (int i = 0; i < level.Length; i++)
         {
             levelKe = i + 1;
             star = PlayerPrefs.GetInt("Star_Level" + levelKe, 0);
+            int nextLevel =  levelKe + 1;
+            int unlock = PlayerPrefs.GetInt("Level" + nextLevel + "_Unlock");
             
 
             // Menyalakan bintang sesuai jumlahnya
@@ -50,20 +54,18 @@ public class ChosenLevel : MonoBehaviour
                     SceneManager.LoadScene("Lv" + index);
                 });
             }else if(star == 3) {
-                int indexp = i + 1;
-                string scene = "Lv" + indexp;
+                int index = i + 1;
+                string scene = "Lv" + index;
                 Destroy(level[i]);
                 level[i] = Instantiate(bintang3, level[i].transform.position, Quaternion.identity, parentTransform);
                 TextMeshProUGUI buttonText = level[i].GetComponentInChildren<TextMeshProUGUI>();
                 buttonText.text = "Lv " + (i + 1);
                 Button btn = level[i].GetComponentInChildren<Button>();
                 btn.onClick.AddListener(() => {
-                    SceneManager.LoadScene("Lv" + indexp);
-                    Debug.Log("Lv " + indexp);
+                    SceneManager.LoadScene("Lv" + index);
+                    Debug.Log("Lv " + index);
                 });
             }
-            int nextLevel =  levelKe + 1;
-            int unlock = PlayerPrefs.GetInt("Level" + nextLevel + "_Unlock");
 
             if(unlock == 1 && nextLevel - 1 < level.Length) {
                 int index = nextLevel;
