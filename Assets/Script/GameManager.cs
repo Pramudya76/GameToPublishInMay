@@ -33,15 +33,15 @@ public class GameManager : MonoBehaviour
     public GameObject Thorn;
     public GameObject GameWinPanel;
     public GameObject FloorPrefabs;
-    //private LevelManager LM;
+    private LevelManager LM;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1;
-        //LM = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
         Audio.gameObject.SetActive(false);
         GameWinPanel.gameObject.SetActive(false);
+        Time.timeScale = 1;
+        LM = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
         if(PlayerPrefs.HasKey("vol")) {
             float saveVol = PlayerPrefs.GetFloat("vol");
             volumeMusic.value = saveVol;
@@ -101,33 +101,71 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // public void LevelDoneScene() {
-    //     int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-    //     if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
-    //         WinGameSound.Play();
-    //         GameWinPanel.gameObject.SetActive(true);
-    //         Time.timeScale = 0;
-    //     }else {
-    //         GameWinPanel.gameObject.SetActive(true);
-    //         LM.LevelDonePanel();
-    //         Time.timeScale = 0;
-    //     }
-    //     //PlayerPrefs.SetInt("HasSaveData", 1);
-    //     //SceneManager.LoadScene(nextSceneIndex);
-    // }
-
-    public void ChangeScene() {
+    public void LevelDoneScene() {
+        GameWinPanel.SetActive(true);
+        LM.LevelDonePanelinGameWin();
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if(LM.waktu <= LM.bintang3) {
+            LM.Star1.SetActive(true);
+            LM.Star2.SetActive(true);
+            LM.Star3.SetActive(true);
+            LM.Star0_2Position.SetActive(false);
+            LM.Star0_3Position.SetActive(false);
+        }else if(LM.waktu > LM.bintang3 && LM.waktu <= LM.bintang2) {
+            LM.Star1.SetActive(true);
+            LM.Star2.SetActive(true);
+            LM.Star3.SetActive(false);
+            LM.Star0_2Position.SetActive(false);
+            LM.Star0_3Position.SetActive(true);
+        }else {
+            LM.Star1.SetActive(true);
+            LM.Star2.SetActive(false);
+            LM.Star3.SetActive(false);
+            LM.Star0_2Position.SetActive(true);
+            LM.Star0_3Position.SetActive(true);
+        }
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
             WinGameSound.Play();
-            GameWinPanel.gameObject.SetActive(true);
-            Time.timeScale = 0;
+            //GameWinPanel.gameObject.SetActive(true);
+            //Time.timeScale = 0;
             return;
             
         }
+        Time.timeScale = 0;
+        // if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
+        //     WinGameSound.Play();
+        //     GameWinPanel.gameObject.SetActive(true);
+        //     Time.timeScale = 0;
+        // }else {
+        //     GameWinPanel.gameObject.SetActive(true);
+        //     LM.LevelDonePanel();
+        //     Time.timeScale = 0;
+        // }
+        //PlayerPrefs.SetInt("HasSaveData", 1);
+        //SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    public void ChangeScene() {
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        // if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
+        //     WinGameSound.Play();
+        //     GameWinPanel.gameObject.SetActive(true);
+        //     Time.timeScale = 0;
+        //     return;
+            
+        // }
         PlayerPrefs.SetInt("HasSaveData", 1);
         SceneManager.LoadScene(nextSceneIndex);
     }
+
+    // IEnumerator CDChangeScene() {
+    //     yield return new WaitForSeconds(1f);
+    //     ChangeScene();
+    // }
+
+    // public void CallCDChangeScene() {
+    //     StartCoroutine(CDChangeScene());
+    // }
 
     public void backToMenu() {
         SceneManager.LoadScene("MainMenu");
@@ -171,9 +209,9 @@ public class GameManager : MonoBehaviour
         Instantiate(Thorn, thornsPosition, Thorn.transform.rotation);
     }
 
-    public IEnumerator CDChangeScene() {
+    public IEnumerator CDChangeToGameWin() {
         yield return new WaitForSeconds(1.5f);
-        ChangeScene();    
+        LevelDoneScene();    
     }
 
     public void GoToMainMenu() {

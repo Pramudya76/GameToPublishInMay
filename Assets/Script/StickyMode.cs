@@ -146,15 +146,16 @@ public class StickyMode : MonoBehaviour
             LM.isLevelCompleted = true;
             GM.CatcheStarSound.Play();
             LM.LevelSystem();
-            StartCoroutine(CDChangeScene());
+            GM.StartCoroutine(GM.CDChangeToGameWin());
+            //StartCoroutine(CDChangeScene());
             Destroy(collision.gameObject);
         }
     }
 
-    IEnumerator CDChangeScene() {
-        yield return new WaitForSeconds(0.1f);
-        GM.ChangeScene();     
-    }
+    // IEnumerator CDChangeScene() {
+    //     yield return new WaitForSeconds(0.1f);
+    //     GM.CDChangeToGameWin();     
+    // }
 
 
 

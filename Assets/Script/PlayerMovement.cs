@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             LM.isLevelCompleted = true;
             GM.CatcheStarSound.Play();
             LM.LevelSystem();
-            GM.StartCoroutine(GM.CDChangeScene());
+            GM.StartCoroutine(GM.CDChangeToGameWin());
             Destroy(collision.gameObject);
         }
 

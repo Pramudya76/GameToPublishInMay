@@ -7,12 +7,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    private float waktu;
+    public float waktu;
     private bool isRunning = true;
     public float bintang2;
     public float bintang3;
     public bool isLevelCompleted = false;
     public TextMeshProUGUI waktuText;
+    public TextMeshProUGUI waktuTextGameWin;
+    public GameObject Star1;
+    public GameObject Star2;
+    public GameObject Star3;
+    public GameObject Star0_2Position;
+    public GameObject Star0_3Position;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +37,13 @@ public class LevelManager : MonoBehaviour
         
     }
 
-    // public void LevelDonePanel() {
-    //     waktuText.text = "Time : " + waktu;
-    // }
+    public void LevelDonePanelinTimer() {
+        waktuText.text = "Time : " + waktu.ToString("F2");
+    }
+
+    public void LevelDonePanelinGameWin() {
+        waktuTextGameWin.text = "Time : " + waktu.ToString("F2") + "s";
+    }
 
     public void LevelSystem() {
         isRunning = false;
