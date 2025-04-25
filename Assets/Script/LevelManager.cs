@@ -32,7 +32,13 @@ public class LevelManager : MonoBehaviour
         if(isRunning) {
             waktu += Time.deltaTime;
             waktuText.text = "Time : " + waktu.ToString("F2");
-            //Debug.Log(waktu);
+            if(waktu <= bintang3) {
+                waktuText.color = Color.green;
+            }else if(waktu > bintang3 && waktu <= bintang2) {
+                waktuText.color = Color.yellow;
+            }else {
+                waktuText.color = Color.red;
+            }
         }
         
     }
@@ -51,7 +57,6 @@ public class LevelManager : MonoBehaviour
         int LevelNumber = SceneManager.GetActiveScene().buildIndex - 1;
         PlayerPrefs.SetFloat("Timer_Level" + LevelNumber, waktu);
         PlayerPrefs.SetInt("Star_Level" + LevelNumber, bintang);
-        //Debug.Log("LevelNumber index : " + LevelNumber);
         int nextLevel = LevelNumber + 1;
         PlayerPrefs.SetInt("Level" + nextLevel + "_Unlock", 1);
         PlayerPrefs.Save();

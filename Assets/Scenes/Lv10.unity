@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PM: {fileID: 863350779}
-  buttonPressedValue: 1
+  buttonPressedValue: 0.2
 --- !u!1 &193809722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,7 +3027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PM: {fileID: 863350779}
-  buttonPressedValue: -1
+  buttonPressedValue: -0.2
 --- !u!1 &418606722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4646,8 +4646,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waktu: 0
-  bintang2: 180
-  bintang3: 150
+  bintang2: 300
+  bintang3: 180
   isLevelCompleted: 0
   waktuText: {fileID: 486032674}
   waktuTextGameWin: {fileID: 1985122150}
@@ -10228,7 +10228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PM: {fileID: 863350779}
-  buttonPressedValue: 1
+  buttonPressedValue: 0.2
 --- !u!1 &1283274093
 GameObject:
   m_ObjectHideFlags: 0
@@ -11194,7 +11194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PM: {fileID: 863350779}
-  buttonPressedValue: 1
+  buttonPressedValue: 0.2
 --- !u!1 &1478065700
 GameObject:
   m_ObjectHideFlags: 0
@@ -11573,7 +11573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PM: {fileID: 863350779}
-  buttonPressedValue: -1
+  buttonPressedValue: -0.2
 --- !u!1 &1509040586
 GameObject:
   m_ObjectHideFlags: 0
@@ -12316,7 +12316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PM: {fileID: 863350779}
-  buttonPressedValue: 1
+  buttonPressedValue: 0.2
 --- !u!1 &1662825594
 GameObject:
   m_ObjectHideFlags: 0
@@ -12748,7 +12748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PM: {fileID: 863350779}
-  buttonPressedValue: 1
+  buttonPressedValue: 0.2
 --- !u!1 &1694406897
 GameObject:
   m_ObjectHideFlags: 0
