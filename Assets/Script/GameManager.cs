@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -34,12 +35,15 @@ public class GameManager : MonoBehaviour
     public GameObject GameWinPanel;
     public GameObject FloorPrefabs;
     private LevelManager LM;
+    public GameObject EyesPrefabs;
+    private Light2D light2D;
     //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
     {
         Audio.gameObject.SetActive(false);
         GameWinPanel.gameObject.SetActive(false);
+        light2D = GameObject.FindWithTag("Light").GetComponent<Light2D>();
         Time.timeScale = 1;
         LM = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
         if(PlayerPrefs.HasKey("vol")) {
@@ -231,6 +235,16 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("HasSaveData", 1);
         ChangeScene();
+    }
+
+    public void SpawnEyes(Transform posisi) {
+        StartCoroutine(CDEyesSpawn(posisi));
+    }
+
+    IEnumerator CDEyesSpawn(Transform posisi) {
+        yield return new WaitForSeconds(3f);
+        light2D.pointLightOuterRadius = 3.6f;
+        Instantiate(EyesPrefabs, posisi.position, Quaternion.identity);
     }
 
 

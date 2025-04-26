@@ -15,6 +15,9 @@ TagManager:
   - StickyMode
   - LevelManager
   - Enemy
+  - Eyes
+  - Light
+  - PointsEyes
   layers:
   - Default
   - TransparentFX

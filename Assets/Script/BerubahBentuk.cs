@@ -26,7 +26,7 @@ public class BerubahBentuk : MonoBehaviour
     void Update()
     {
         posisiObjectAwal = transform.position;
-        Debug.Log(posisiObjectAwal);
+        //Debug.Log(posisiObjectAwal);
         if(Input.GetKeyDown(KeyCode.Alpha2) && checkMode != "Mode2") {
             checkMode = "Mode2";
             //posisiObjectAwal = transform.position;
