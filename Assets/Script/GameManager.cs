@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public GameObject StonePrefabs;
     public GameObject StickyPrefabs;
     public bool isDead;
-    public string mode;
+    public string mode = "Mode1";
     public GameObject Thorn;
     public GameObject GameWinPanel;
     public GameObject FloorPrefabs;
@@ -43,7 +43,12 @@ public class GameManager : MonoBehaviour
     {
         Audio.gameObject.SetActive(false);
         GameWinPanel.gameObject.SetActive(false);
-        light2D = GameObject.FindWithTag("Light").GetComponent<Light2D>();
+        if(light2D == null) {
+            GameObject lightObject2D = GameObject.FindWithTag("Light");
+            if(lightObject2D != null) {
+                light2D = lightObject2D.GetComponent<Light2D>();
+            }
+        }
         Time.timeScale = 1;
         LM = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
         if(PlayerPrefs.HasKey("vol")) {

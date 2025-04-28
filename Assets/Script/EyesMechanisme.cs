@@ -36,7 +36,7 @@ public class EyesMechanisme : MonoBehaviour
         //Debug.Log("Masuk Trigger dengan: " + collision.gameObject.name);
         if(isDestroy) return;
 
-        if(collision.gameObject.tag == "Bones") {
+        if(collision.gameObject.tag == "Bones" || collision.gameObject.tag == "StoneMode") {
             Debug.Log("Eyes berjalan");
             isDestroy = true;
             light2D.pointLightOuterRadius = 1000;
