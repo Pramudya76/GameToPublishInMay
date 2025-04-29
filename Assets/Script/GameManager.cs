@@ -50,7 +50,12 @@ public class GameManager : MonoBehaviour
             }
         }
         Time.timeScale = 1;
-        LM = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>();
+        if(LM == null) {
+            GameObject LevelManager = GameObject.FindWithTag("LevelManager");
+            if(LevelManager != null) {
+                LM = LevelManager.GetComponent<LevelManager>();
+            }
+        }
         if(PlayerPrefs.HasKey("vol")) {
             float saveVol = PlayerPrefs.GetFloat("vol");
             volumeMusic.value = saveVol;

@@ -3430,6 +3430,7 @@ MonoBehaviour:
   Thorn: {fileID: 4112070970457554385, guid: de83073f947c65a4c849a67d5f9e68c0, type: 3}
   GameWinPanel: {fileID: 316308836}
   FloorPrefabs: {fileID: 541973611935534914, guid: 41d7c12281956504587153aa6247ddff, type: 3}
+  EyesPrefabs: {fileID: 3822690806300654749, guid: 674177f344710e34999498812e3ff4ac, type: 3}
 --- !u!4 &1727576050
 Transform:
   m_ObjectHideFlags: 0
@@ -4136,6 +4137,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2068173523}
     m_Modifications:
+    - target: {fileID: 4950269371194306172, guid: c83473d60825897439a51aac8edf4b85, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 495
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950269371194306172, guid: c83473d60825897439a51aac8edf4b85, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950269371194306172, guid: c83473d60825897439a51aac8edf4b85, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950269371194306172, guid: c83473d60825897439a51aac8edf4b85, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 125
+      objectReference: {fileID: 0}
     - target: {fileID: 5493694739514012058, guid: c83473d60825897439a51aac8edf4b85, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4235,6 +4252,22 @@ PrefabInstance:
     - target: {fileID: 6600183102906791615, guid: c83473d60825897439a51aac8edf4b85, type: 3}
       propertyPath: m_Name
       value: AfterHaveProgres
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072543574984409438, guid: c83473d60825897439a51aac8edf4b85, type: 3}
+      propertyPath: m_fontSize
+      value: 19.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072543574984409438, guid: c83473d60825897439a51aac8edf4b85, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f9b57116c81d6834092b304a0d351e11, type: 2}
+    - target: {fileID: 7072543574984409438, guid: c83473d60825897439a51aac8edf4b85, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4165599570714327109, guid: f9b57116c81d6834092b304a0d351e11, type: 2}
+    - target: {fileID: 7072543574984409438, guid: c83473d60825897439a51aac8edf4b85, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7323487797793674164, guid: c83473d60825897439a51aac8edf4b85, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
