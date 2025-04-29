@@ -2390,7 +2390,7 @@ GameObject:
   - component: {fileID: 744049648}
   m_Layer: 0
   m_Name: LevelManager
-  m_TagString: Untagged
+  m_TagString: LevelManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5559,6 +5559,7 @@ MonoBehaviour:
   Thorn: {fileID: 4112070970457554385, guid: de83073f947c65a4c849a67d5f9e68c0, type: 3}
   GameWinPanel: {fileID: 1171023914}
   FloorPrefabs: {fileID: 541973611935534914, guid: 41d7c12281956504587153aa6247ddff, type: 3}
+  EyesPrefabs: {fileID: 0}
 --- !u!4 &1592510870
 Transform:
   m_ObjectHideFlags: 0

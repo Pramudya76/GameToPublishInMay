@@ -248,7 +248,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CDEyesSpawn(Transform posisi) {
         yield return new WaitForSeconds(3f);
-        light2D.pointLightOuterRadius = 3.6f;
+        light2D.pointLightOuterRadius = 4f;
         Instantiate(EyesPrefabs, posisi.position, Quaternion.identity);
     }
 

@@ -3927,6 +3927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Triangle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4410672252447397513, guid: de83073f947c65a4c849a67d5f9e68c0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5107,6 +5111,10 @@ PrefabInstance:
     - target: {fileID: 4112070970457554385, guid: de83073f947c65a4c849a67d5f9e68c0, type: 3}
       propertyPath: m_Name
       value: Triangle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410672252447397513, guid: de83073f947c65a4c849a67d5f9e68c0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8927,6 +8935,10 @@ PrefabInstance:
     - target: {fileID: 4112070970457554385, guid: de83073f947c65a4c849a67d5f9e68c0, type: 3}
       propertyPath: m_Name
       value: Triangle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410672252447397513, guid: de83073f947c65a4c849a67d5f9e68c0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
