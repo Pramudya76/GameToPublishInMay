@@ -3674,8 +3674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waktu: 0
-  bintang2: 30
-  bintang3: 15
+  bintang2: 45
+  bintang3: 20
   isLevelCompleted: 0
   waktuText: {fileID: 1315158871}
   waktuTextGameWin: {fileID: 1539504677}

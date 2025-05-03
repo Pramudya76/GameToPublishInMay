@@ -5043,7 +5043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waktu: 0
-  bintang2: 300
+  bintang2: 240
   bintang3: 180
   isLevelCompleted: 0
   waktuText: {fileID: 486032674}
