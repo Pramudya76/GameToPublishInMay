@@ -31,14 +31,11 @@ public class MechanicWork : MonoBehaviour
         if(moving) {
             transform.position = Vector2.Lerp(transform.position, posisi, Time.deltaTime * moveSpeed);
             door.transform.position = Vector2.Lerp(door.transform.position, posisiDoor,Time.deltaTime * moveSpeed);
-            //GM.GateSound.Play();
-            Debug.Log("Halo musik");
             song = true;
             StartCoroutine(CdSoundGate());
         }else {
             transform.position = Vector2.Lerp(transform.position, posisiAwal, Time.deltaTime * moveSpeed);
             door.transform.position = Vector2.Lerp(door.transform.position, posisiAwalDoor, Time.deltaTime * moveSpeed * 1.5f);
-            //GM.GateSound.Play();
             song = true;
             StartCoroutine(CdSoundGate());
         }
@@ -50,7 +47,6 @@ public class MechanicWork : MonoBehaviour
             song = true;
         }else {
             if(song) {
-                Debug.Log("berjalan bool song-nya");
                 GM.GateSound.Stop();
                 song = false;
             }

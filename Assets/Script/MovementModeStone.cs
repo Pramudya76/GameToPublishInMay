@@ -73,18 +73,8 @@ public class MovementModeStone : MonoBehaviour
             GM.CatcheStarSound.Play();
             LM.LevelSystem();
             GM.StartCoroutine(GM.CDChangeToGameWin());
-            //StartCoroutine(CDChangeScene());
             Destroy(collision.gameObject);
         }
     }
-
-    // IEnumerator CDChangeScene() {
-    //     yield return new WaitForSeconds(0.1f);
-    //     GM.CDChangeToGameWin();     
-    // }
-
-    
-
-
 
 }

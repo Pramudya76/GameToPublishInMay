@@ -20,9 +20,6 @@ public class ThornsUpMoveinLv7 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // float newY = startY + Mathf.PingPong(Time.time * moveSpeed, moveDistance);
-        // transform.position = new Vector2(transform.position.x, newY);
-
         if(move) return;
         
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);

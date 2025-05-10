@@ -25,7 +25,6 @@ public class MechanicinLv6 : MonoBehaviour
         if(isDestroy) return;
         if(collision.gameObject.tag == "Bones" || collision.gameObject.tag == "StoneMode" || collision.gameObject.tag == "StickyMode") {
             isDestroy = true;
-            Debug.Log("Nyala cuy");
             GM.SpawnFloor(FloorPosition);
             StartCoroutine(CDDestroyFloor());
         }

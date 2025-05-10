@@ -20,11 +20,9 @@ public class PuzzleManagerLv10 : MonoBehaviour
     public void checkedPuzzle()
     {
         indexButton++;
-        Debug.Log(indexButton);
         if(indexButton >= buttonColor.Length) {
             Door.transform.position = positionStartDoor;
             GM.GateSound.Play();
-            Debug.Log(indexButton);
         }
 
 

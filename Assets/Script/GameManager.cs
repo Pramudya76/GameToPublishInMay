@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
     private LevelManager LM;
     public GameObject EyesPrefabs;
     private Light2D light2D;
-    //private int SceneIndex = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,16 +72,10 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         StoneMode = GameObject.FindWithTag("StoneMode");
         StickyMode = GameObject.FindWithTag("StickyMode");
-        //Thorn = GameObject.FindWithTag("Thorns");
         if(player != null) {
             startPosition = player.transform.position;
-            Debug.Log("Berjalan");
         }
-
-
-
         music.Play();
-
     }
 
     // Update is called once per frame
@@ -92,9 +85,6 @@ public class GameManager : MonoBehaviour
             Audio.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
-
-        
-        
     }
 
     public void callRespawn() {
@@ -140,53 +130,21 @@ public class GameManager : MonoBehaviour
         }
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
             WinGameSound.Play();
-            //GameWinPanel.gameObject.SetActive(true);
-            //Time.timeScale = 0;
-            return;
-            
+            return;  
         }
         Time.timeScale = 0;
-        // if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
-        //     WinGameSound.Play();
-        //     GameWinPanel.gameObject.SetActive(true);
-        //     Time.timeScale = 0;
-        // }else {
-        //     GameWinPanel.gameObject.SetActive(true);
-        //     LM.LevelDonePanel();
-        //     Time.timeScale = 0;
-        // }
-        //PlayerPrefs.SetInt("HasSaveData", 1);
-        //SceneManager.LoadScene(nextSceneIndex);
     }
 
     public void ChangeScene() {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        // if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings) {
-        //     WinGameSound.Play();
-        //     GameWinPanel.gameObject.SetActive(true);
-        //     Time.timeScale = 0;
-        //     return;
-            
-        // }
         PlayerPrefs.SetInt("HasSaveData", 1);
         SceneManager.LoadScene(nextSceneIndex);
     }
 
-    // IEnumerator CDChangeScene() {
-    //     yield return new WaitForSeconds(1f);
-    //     ChangeScene();
-    // }
-
-    // public void CallCDChangeScene() {
-    //     StartCoroutine(CDChangeScene());
-    // }
-
     public void backToMenu() {
         SceneManager.LoadScene("MainMenu");
         WinGameSound.Stop();
-
     }
-
 
     public void ExitGame() {
         PlayerPrefs.DeleteKey("vol");
@@ -219,7 +177,6 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator callThornsBack(Vector3 thornsPosition) {
         yield return new WaitForSeconds(3f);
-        Debug.Log("jalannnnnn");
         Instantiate(Thorn, thornsPosition, Thorn.transform.rotation);
     }
 

@@ -10,21 +10,7 @@ public class LightMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // GameObject ModeDefault = GameObject.FindWithTag("Bones");
-        // GameObject ModeStone = GameObject.FindWithTag("StoneMode");
-        // GameObject ModeSticky = GameObject.FindWithTag("StickyMode");
-
-        // if(ModeDefault != null) {
-        //     DefaultMode = ModeDefault.transform;
-        // }else if(ModeStone != null) {
-        //     StoneMode = ModeStone.transform;
-        // }else if(ModeSticky != null) {
-        //     StickyMode = ModeSticky.transform;
-        // }else {
-        //     Debug.Log("GameObject tdk ditemukan");
-        // }
-
-
+        
     }
 
     // Update is called once per frame

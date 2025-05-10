@@ -6,8 +6,6 @@ public class PlatformMove : MonoBehaviour
 {
     private Vector3 posisiAwal;
     private Vector3 posisiAkhir;
-    //private float startY;
-    //private float moveDistance = 4f;
     private float moveSpeed = 1f;
     private bool moving;
     // Start is called before the first frame update
@@ -21,8 +19,6 @@ public class PlatformMove : MonoBehaviour
     void Update()
     {
         if(moving) {
-            // float newY = startY + Mathf.PingPong(Time.time * moveSpeed, moveDistance);
-            // transform.position = new Vector2(transform.position.x, newY);
             transform.position = Vector2.Lerp(transform.position, posisiAkhir, Time.deltaTime * moveSpeed);
         }else {
             transform.position = Vector2.Lerp(transform.position, posisiAwal, Time.deltaTime * moveSpeed);

@@ -20,9 +20,6 @@ public class ChosenLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // PlayerPrefs.DeleteKey("Star_Level10");
-        // PlayerPrefs.DeleteKey("Timer_Level10"); // Jika kamu juga ingin reset waktu
-        // PlayerPrefs.Save();
         GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         for (int i = 0; i < level.Length; i++)
         {
@@ -90,14 +87,6 @@ public class ChosenLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // int LevelNumber = SceneManager.GetActiveScene().buildIndex - 1;
-        // for(int a = 1; a <= 5; a++) {
-        //     if(PlayerPrefs.HasKey("Star_Level" + level[a])) {
-        //         if(PlayerPrefs.GetInt("Star_Level" + level[a]) == 3) {
-
-        //         }
-        //     }
-
-        // }
+        
     }
 }

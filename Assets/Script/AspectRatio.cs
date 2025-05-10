@@ -4,7 +4,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Camera))]
 public class AspectRatio : MonoBehaviour
 {
-    public float targetAspectRatio = 16f / 9f; // The desired aspect ratio, e.g., 16:9
+    public float targetAspectRatio = 16f / 9f; 
     private Camera _camera;
     private int lastWidth, lastHeight;
 

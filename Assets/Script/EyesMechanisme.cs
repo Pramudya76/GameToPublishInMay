@@ -28,25 +28,19 @@ public class EyesMechanisme : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("Cobaaaaaaaaaaaa");
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Masuk Trigger dengan: " + collision.gameObject.name);
         if(isDestroy) return;
 
         if(collision.gameObject.tag == "Bones" || collision.gameObject.tag == "StoneMode") {
-            Debug.Log("Eyes berjalan");
             isDestroy = true;
             light2D.pointLightOuterRadius = 1000;
             int RandomSpawn = Random.Range(0, points.Length);
             GM.SpawnEyes(points[RandomSpawn]);
             Destroy(gameObject);
-            //StartCoroutine(CDDestroy());
-            // if(gameObject == null) {
-            //     light2D.pointLightOuterRadius = OuterLight2D;
-            // }
         }
     }
 

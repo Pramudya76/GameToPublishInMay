@@ -30,18 +30,12 @@ public class PuzzleOrder : MonoBehaviour
 
         }
         if(buttonName == correctPuzzle[indexButton]) {
-            Debug.Log("Benar");
             indexButton++;
             if(indexButton >= correctPuzzle.Length) {
-                Debug.Log("Pinti terbuka");
                 door.transform.position = new Vector2(door.transform.position.x, door.transform.position.y + 4);
                 GM.GateSound.Play();
-                // if(Vector2.Distance(door.transform.position, positionDoorAfter) <= 0.1f) {
-                //     GM.GateSound.Stop();
-                // }
             }
         }else {
-            Debug.Log("Salah");
             indexButton = 0;
         }
 

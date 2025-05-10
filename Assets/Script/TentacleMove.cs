@@ -13,7 +13,6 @@ public class TentacleMove : MonoBehaviour
     
     void Start()
     {
-        // Store the initial offset from the parent when the game starts
         if (Enemy != null)
         {
             startX = transform.position.x - Enemy.transform.position.x;
@@ -26,14 +25,11 @@ public class TentacleMove : MonoBehaviour
     {
         if (Enemy != null)
         {
-            // Calculate sine movement
             float moveY = Mathf.Sin((Time.time + waktuJeda) * moveSpeed) * moveTentacle;
             float moveX = Mathf.Sin((Time.time + waktuJeda) * moveSpeed) * moveTentacle;
             
-            // Calculate new position relative to parent (Enemy)
             Vector3 newPosition = Enemy.transform.position + new Vector3(startX + moveX, startY + moveY, 0);
             
-            // Apply the new position
             transform.position = newPosition;
         }
     }
