@@ -31,13 +31,11 @@ public class BerubahBentuk : MonoBehaviour
             GM.mode = "Mode2";
             Instantiate(object1, posisiObjectAwal, Quaternion.identity);
             DestroyParent();
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha3) && GM.mode != "Mode3") {
+        }else if(Input.GetKeyDown(KeyCode.Alpha3) && GM.mode != "Mode3") {
             GM.mode = "Mode3";
             Instantiate(object2, posisiObjectAwal, Quaternion.identity);
             DestroyParent();
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha1) && GM.mode != "Mode1") {
+        }else if(Input.GetKeyDown(KeyCode.Alpha1) && GM.mode != "Mode1") {
             GM.mode = "Mode1";
             Instantiate(object3, posisiObjectAwal, Quaternion.identity);
             DestroyParent();
