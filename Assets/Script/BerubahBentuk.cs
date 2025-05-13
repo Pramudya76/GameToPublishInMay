@@ -12,6 +12,7 @@ public class BerubahBentuk : MonoBehaviour
     public GameObject object2;
     public GameObject object3;
     private Vector2 posisiObjectAwal;
+    public bool isChangeMode = false;
     //public String checkMode;
 
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class BerubahBentuk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isChangeMode) return;
         posisiObjectAwal = transform.position;
         if(Input.GetKeyDown(KeyCode.Alpha2) && GM.mode != "Mode2") {
             GM.mode = "Mode2";
@@ -44,6 +46,7 @@ public class BerubahBentuk : MonoBehaviour
 
     }
     public void DestroyParent() {
+        isChangeMode = true;
         if(transform.parent != null) {
             posisiObjectAwal = transform.parent.position;
             Destroy(transform.parent.gameObject);
